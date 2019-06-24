@@ -7,7 +7,24 @@ import { stompConfig } from './stomp.config';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatDatepicker,
+  MatNativeDateModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatOptionModule,
+  MatSlideToggleModule, ErrorStateMatcher, ShowOnDirtyErrorStateMatcher
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -15,11 +32,22 @@ import { MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule } 
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
     MatOptionModule,
-    MatSelectModule
+    MatSlideToggleModule
   ],
   providers: [StompService,
     {

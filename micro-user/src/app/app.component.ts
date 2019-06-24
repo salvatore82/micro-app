@@ -13,9 +13,6 @@ export class AppComponent {
   title = 'websocketpoc';
   output = 'init ';
 
-  name = new FormControl('', [Validators.required]);
-  lastName = new FormControl('', [Validators.required]);
-
   private datasubscription: Subscription;
   private statesubscription: Subscription;
   //public uiData: WsData;
