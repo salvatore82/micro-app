@@ -2,58 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { StompConfig, StompService } from '@stomp/ng2-stompjs';
-import { stompConfig } from './stomp.config';
+import { RegistrationComponent } from './registration/registration.component';
+import { FormsModule } from '@angular/forms';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistrationService } from './registration/registration.service';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import {
-  MatButtonModule,
-  MatMenuModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatCardModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatDatepickerModule,
-  MatDatepicker,
-  MatNativeDateModule,
-  MatRadioModule,
-  MatSelectModule,
-  MatOptionModule,
-  MatSlideToggleModule, ErrorStateMatcher, ShowOnDirtyErrorStateMatcher
-} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatSlideToggleModule
+    HttpClientModule
   ],
-  providers: [StompService,
-    {
-      provide: StompConfig,
-      useValue: stompConfig
-    }],
+  providers: [RegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

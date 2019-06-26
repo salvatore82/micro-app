@@ -1,45 +1,7 @@
-<!-- Main Toolbar of an App -->
-<mat-toolbar color="accent">
-  <span>Microuser</span>
-  <span class="demo-toolbar"></span>
-</mat-toolbar>
-
-<mat-card>
-  <!-- Title of an Card -->
-  <mat-card-title>
-    Register user
-  </mat-card-title>
-
-  <mat-card-content>
-    <form>
-      <table>
-        <tr>
-          <td>
-            <mat-form-field class="demo-full-width">
-              <input matInput placeholder="First Name">
-            </mat-form-field>
-          </td>
-          <td>
-            <mat-form-field class="demo-full-width">
-              <input matInput placeholder="Last Name">
-            </mat-form-field>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <mat-form-field class="demo-full-width">
-              <mat-file-upload matInput placeholder="Last Name"></mat-file-upload>
-            </mat-form-field>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" class="content-center">
-            <button mat-raised-button color="accent">Submit</button>
-            <button mat-raised-button color="accent">Clear</button>
-            {{ output }}
-          </td>
-        </tr>
-      </table>
-    </form>
-  </mat-card-content>
-</mat-card>
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+  <app-registration></app-registration>
+</div>

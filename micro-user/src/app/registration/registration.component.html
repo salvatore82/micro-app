@@ -1,0 +1,15 @@
+<h2>Insert data here</h2>
+
+<div>
+    <input [(ngModel)]="user.name" placeholder="Name">
+</div>
+<div>
+    <input [(ngModel)]="user.lastName" placeholder="Last name">
+</div>
+<div>
+    <input type="file" placeholder="Document" (change)="onFileChange($event)">
+</div>
+<div>
+    <button class="clear" (click)="saveUser()">Save</button>
+    <button class="clear" (click)="clear()">Clear</button>
+</div>
