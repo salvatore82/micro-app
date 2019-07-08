@@ -1,15 +1,50 @@
-<h2>Insert data here</h2>
+<mat-card>
+    <!-- Title of an Card -->
+    <mat-card-title>
+        {{ title }}
+    </mat-card-title>
 
-<div>
-    <input [(ngModel)]="user.name" placeholder="Name">
-</div>
-<div>
-    <input [(ngModel)]="user.lastName" placeholder="Last name">
-</div>
-<div>
-    <input type="file" placeholder="Document" (change)="onFileChange($event)">
-</div>
-<div>
-    <button class="clear" (click)="saveUser()">Save</button>
-    <button class="clear" (click)="clear()">Clear</button>
-</div>
+    <mat-card-content>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <mat-form-field class="demo-full-width">
+                            <input matInput [(ngModel)]="user.name" placeholder="Name" name="name">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="demo-full-width">
+                            <input matInput [(ngModel)]="user.lastName" placeholder="Last name" name="lastName">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content-right">
+                        <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+                    </td>
+                    <td class="content-left">
+                        <input hidden (change)="onFileChange($event)" #fileInput type="file" id="file">
+                        {{ file!=null ? file.name : ''}}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="content-center">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="content-center">
+                        <button mat-raised-button (click)="saveUser()">Submit</button>&nbsp;
+                        <button mat-raised-button (click)="clear()">Clear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="content-center">
+                        <mat-icon color="primary" *ngIf="registered">verified_user</mat-icon>
+                        <mat-icon class="green-icon" *ngIf="validated">verified_user</mat-icon>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+</mat-card>
